@@ -70,6 +70,8 @@ li a {
 button {
     background-color: rgb(255, 255, 255);
     padding: 10px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     border: 2px solid #04AA6D; 
     border-radius: 10px;
     cursor: pointer;
@@ -85,6 +87,7 @@ div.sticky {
     position: sticky;
     padding: 10px;
     top: 0;
+    text-align: center;
 }
 
 .projects {
