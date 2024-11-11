@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    font-family: 'Arial';
     background: #5bc0de41;
     margin-top: 60px;
 }
@@ -26,9 +25,15 @@ h1 {
     animation-duration: 4s;
 }
 
-p, h2, h3, b{
+h2 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+p, h3, b{
     /* font-family: "Papyrus", fantasy; */
-    font-family: "Gaegu", cursive;
+    /* font-family: "Gaegu", cursive; */
+    /* font-family: Times; */
+    font-family: "Trebuchet MS";
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -68,6 +73,7 @@ button {
     border: 2px solid #04AA6D; 
     border-radius: 10px;
     cursor: pointer;
+    font-family: "Trebuchet MS";
 }
 
 button:hover {
@@ -75,8 +81,7 @@ button:hover {
 }
 
 .projects {
-    padding: 50px;
-    font-family: "Gaegu", cursive;
+    padding: 50px 50px 0px 50px;
 }
 
 .card-container {
@@ -104,12 +109,13 @@ button:hover {
 .links {
     display: flex;
     justify-content: space-between;
+    font-size: 18px;
 }
 
 .links a {
     padding: 6px 10px;
-    color: blue;
     border-radius: 5px;
+    color: blue;
     transition: background-coolor 0.3s ease;
 }
 
@@ -119,7 +125,6 @@ button:hover {
 
 .pictures {
     padding: 50px;
-    font-family: "Gaegu", cursive;
 }
 
 /* Carousel code */
@@ -173,5 +178,4 @@ button:hover {
 
 .resources {
     padding: 50px;
-    font-family: "Gaegu", cursive;
 }
