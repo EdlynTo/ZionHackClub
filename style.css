@@ -80,6 +80,13 @@ button:hover {
     background-color: #c4ffe9;
 }
 
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 10px;
+    top: 0;
+}
+
 .projects {
     padding: 50px 50px 0px 50px;
 }
