@@ -21,7 +21,7 @@
         <p>Use the buttons below to jump to different sections:</p>
         <a href="#resources"><button>Resources</button></a>
         <a href="#projects"><button >Project Showcase</button></a>
-        <a href=""><button>Pictures</button></a>
+        <a href="#pictures"><button>Pictures</button></a>
     </div>
     <div class="projects" id="projects">
         <h2>Project Showcase: Boba Drops!</h2>
@@ -169,9 +169,50 @@
             </div>
         </div>
     </div>
+
+    <div class="pictures" id="pictures">
+        <h2>Pictures</h2>
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">&#10094</button>
+            <div class="carousel-images">
+                <img src="https://cloud-1v3onov7t-hack-club-bot.vercel.app/0image.png" alt="">
+                <img src="https://cloud-d7cj030hx-hack-club-bot.vercel.app/0image.png" alt="">
+                <img src="https://cloud-845m1crgh-hack-club-bot.vercel.app/0image.png" alt="">
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095</button>
+        </div>
+    </div>
+
     <div class="resources" id="resources">
         <h2>Resources</h2>
         <p>Here are some slideshows presentations, videos and links that we used for our Hack Club.</p>
+        <p>To be added...</p>
     </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+        
+        document.querySelector('.prev').addEventListener('click', function() {
+            changeSlide(-1);
+        });
+        
+        document.querySelector('.next').addEventListener('click', function() {
+            changeSlide(1);
+        });
+        
+        function changeSlide(direction) {
+            console.log('currentSlide:', currentSlide, 'direction:', direction);
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        window.onload = function() {
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+           
 </body>
 </html>

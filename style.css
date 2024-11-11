@@ -117,6 +117,60 @@ button:hover {
     background-color: #c4ffe9;
 }
 
+.pictures {
+    padding: 50px;
+    font-family: "Gaegu", cursive;
+}
+
+/* Carousel code */
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 .resources {
     padding: 50px;
     font-family: "Gaegu", cursive;
