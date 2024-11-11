@@ -189,3 +189,33 @@ div.sticky {
 .resources {
     padding: 50px;
 }
+
+.video-item {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.tutorials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tutorials video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 45%; /* Two videos per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        flex: 1 1 100%; /* One video per row on smaller screens */
+    }
+}
