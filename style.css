@@ -1,9 +1,9 @@
 @keyframes colorchange {
     0%   {color:red;}
-    25%  {color:orange;}
-    50%  {color:green;}
-    75%  {color:blue;}
-    100% {color:purple;}
+    25%  {color:green;}
+    50%  {color:blue;}
+    75% {color:purple;}
+    100%   {color:red;}
 }
 
 html {
@@ -21,8 +21,7 @@ body {
 
 h1 {
     font-family: "Lucida Console", "Courier New", monospace;
-    animation-name: colorchange;
-    animation-duration: 4s;
+    animation: colorchange 4s infinite;
 }
 
 h2 {
@@ -61,6 +60,7 @@ li a {
 #dino {
     width: 150px;
     transition: transform 0.7s ease;
+    padding-left: 30px;
 }
 
 #dino:hover {
@@ -76,6 +76,8 @@ button {
     border-radius: 10px;
     cursor: pointer;
     font-family: "Trebuchet MS";
+    position: relative;
+    z-index: 10;
 }
 
 button:hover {
@@ -88,6 +90,7 @@ div.sticky {
     padding: 10px;
     top: 0;
     text-align: center;
+    z-index: 100;
 }
 
 .projects {
@@ -99,15 +102,36 @@ div.sticky {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 30px;
+    position: relative;
+    z-index: 0;
 }
 
+/* .card {
+    background-color: rgb(249, 242, 250);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+} */
+
+/* 3D tilty effect */
 .card {
     background-color: rgb(249, 242, 250);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: left;
-    /* transition: transform 0.3 ease; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform;
+    position: relative;
+    z-index: 0;
+}
+
+.card:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card img {

@@ -865,6 +865,22 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-images img');
         const totalSlides = slides.length;
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `rotateY(${x * 20}deg) rotateX(${y * -20}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+            });
+        });
+
         
         document.querySelector('.prev').addEventListener('click', function() {
             changeSlide(-1);
